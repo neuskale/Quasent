@@ -8,27 +8,27 @@ export default function BannerSlider() {
         {
             image:
                 "https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=2000&q=80",
-            title: "Empowering Digital Transformation",
-            text: "Innovative solutions in AI, Cloud, and Digital Engineering designed to accelerate your business.",
-            button1: "Learn More",
-            button2: "Get Started",
+            title: "Specialized staffing for utilities, energy, engineering, and field services.",
+            text: "Quasent provides fully vetted engineering, field, and IT professionals for electric, gas, and water utilities—plus construction & engineering and oil & gas service partners.",
+            button1: "Request Candidates",
+            button2: "Roles We Staff",
         },
-        {
-            image:
-                "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=2000&q=80",
-            title: "Building Future-Ready Enterprises",
-            text: "Delivering high-impact digital solutions for clients across industries globally.",
-            button1: "Our Services",
-            button2: "Contact Us",
-        },
-        {
-            image:
-                "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80",
-            title: "Engineering Excellence at Scale",
-            text: "From strategy to implementation, we help companies innovate and win.",
-            button1: "Explore Solutions",
-            button2: "Find Talent",
-        },
+        // {
+        //     image:
+        //         "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=2000&q=80",
+        //     title: "Building Future-Ready Enterprises",
+        //     text: "Delivering high-impact digital solutions for clients across industries globally.",
+        //     button1: "Our Services",
+        //     button2: "Contact Us",
+        // },
+        // {
+        //     image:
+        //         "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2000&q=80",
+        //     title: "Engineering Excellence at Scale",
+        //     text: "From strategy to implementation, we help companies innovate and win.",
+        //     button1: "Explore Solutions",
+        //     button2: "Find Talent",
+        // },
     ];
 
     const [current, setCurrent] = useState(0);

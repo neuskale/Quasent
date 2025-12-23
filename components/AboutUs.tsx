@@ -18,7 +18,7 @@ export default function AboutUsSection() {
                 >
                     <Image
                         src="/about.png"
-                        alt="About our company"
+                        alt="About Quasent"
                         width={560}
                         height={500}
                         className="rounded-2xl shadow-lg object-cover"
@@ -26,8 +26,7 @@ export default function AboutUsSection() {
 
                     {/* decorative gradient circle */}
                     <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full
-                        bg-gradient-to-r from-purple-500 to-cyan-500 opacity-20 blur-2xl">
-                    </div>
+                        bg-gradient-to-r from-purple-500 to-cyan-500 opacity-20 blur-2xl" />
                 </motion.div>
 
                 {/* RIGHT — CONTENT */}
@@ -41,29 +40,40 @@ export default function AboutUsSection() {
                         About{" "}
                         <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500
                             text-transparent bg-clip-text">
-                            Us
+                            Quasent
                         </span>
                     </h2>
 
                     <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                        We are a forward-thinking recruitment & workforce solutions company, committed
-                        to connecting world-class talent with industry-leading organizations.
-                        Our mission is to empower businesses and professionals through innovative hiring
-                        strategies and deep domain expertise.
+                        Quasent is a specialized staffing partner supporting utilities,
+                        engineering-led organizations, and energy service providers operating
+                        in regulated, safety-critical environments.
                     </p>
 
                     <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                        Built on integrity, transparency, and long-term partnerships, we help organizations
-                        thrive through specialized hiring, workforce transformation, and future-ready
-                        talent solutions.
+                        We focus on delivering fully vetted, deployment-ready professionals
+                        across engineering, field services, and technology roles — ensuring
+                        compliance, safety, and performance from day one.
                     </p>
 
-                    {/* KEY FEATURES */}
-                    <div className="grid grid-cols-2 gap-4 text-gray-800 font-medium text-[15px] mb-10">
-                        <div className="flex items-center gap-2">🌍 Global Talent Network</div>
-                        <div className="flex items-center gap-2">🤝 Long-term Partnerships</div>
-                        <div className="flex items-center gap-2">⚡ Fast & Scalable Hiring</div>
-                        <div className="flex items-center gap-2">🎯 Industry-specialized Experts</div>
+                    {/* WHY QUASENT — KEY POINTS */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-800 font-medium text-[15px] mb-10">
+                        <div className="flex items-start gap-3">
+                            <span className="text-indigo-600 font-bold">01.</span>
+                            Utility-grade expertise in regulated environments
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-indigo-600 font-bold">02.</span>
+                            Curated shortlists delivered quickly
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-indigo-600 font-bold">03.</span>
+                            Flexible engagement models — contract, contract-to-hire, direct hire
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-indigo-600 font-bold">04.</span>
+                            Project teams aligned to delivery and compliance needs
+                        </div>
                     </div>
 
                     {/* CTA BUTTON */}
