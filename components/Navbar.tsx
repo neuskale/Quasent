@@ -13,10 +13,6 @@ import {
     FaLightbulb,
     FaPhone,
     FaChevronDown,
-    FaUserCog,
-    FaUser,
-    FaStar,
-    FaPlusCircle,
     FaUserCircle,
 } from "react-icons/fa";
 
@@ -52,82 +48,47 @@ export default function Navbar() {
 
                         <li className="flex items-center gap-2">
                             <FaBuilding className="text-blue-500" />
-                            Industries
+                            <Link href="#">Industries</Link>
                         </li>
 
-                        {/* ROLES WE STAFF */}
                         <li
                             className="relative"
                             onMouseEnter={() => setOpenDropdown("roles")}
                             onMouseLeave={() => setOpenDropdown(null)}
                         >
-                            <button className="flex items-center gap-2">
+                            <Link href="#" className="flex items-center gap-2">
                                 <FaBriefcase className="text-purple-500" />
                                 Roles We Staff
-                                <FaChevronDown className="text-xs text-gray-500" />
-                            </button>
-
-                            {/* DROPDOWN */}
-                            <div
-                                ref={dropdownRef}
-                                className={`
-                  absolute left-0 top-full mt-2 w-72 bg-white rounded-md shadow-lg border p-4
-                  transition-all
-                  ${openDropdown === "roles" ? "opacity-100 visible" : "opacity-0 invisible"}
-                `}
-                            >
-                                <ul className="space-y-3 text-sm">
-
-                                    <li className="flex items-center gap-3">
-                                        <FaUserCog className="text-indigo-500" />
-                                        Engineers & Technical Roles
-                                    </li>
-
-                                    <li className="flex items-center gap-3">
-                                        <FaUser className="text-green-500" />
-                                        Field Technicians
-                                    </li>
-
-                                    <li className="flex items-center gap-3">
-                                        <FaStar className="text-yellow-500" />
-                                        Project Managers
-                                    </li>
-
-                                    <li className="flex items-center gap-3">
-                                        <FaPlusCircle className="text-pink-500" />
-                                        More Specialized Roles
-                                    </li>
-
-                                </ul>
-                            </div>
+                            </Link>
                         </li>
 
                         <li className="flex items-center gap-2">
                             <FaUserShield className="text-emerald-500" />
-                            How We Vet
+                            <Link href="#">How We Vet</Link>
                         </li>
 
                         <li className="flex items-center gap-2">
                             <FaHandshake className="text-orange-500" />
-                            Engagement Models
+                            <Link href="#">Engagement Models</Link>
                         </li>
 
                         <li className="flex items-center gap-2">
                             <FaUserTie className="text-sky-500" />
-                            About
+                            <Link href="/about">About</Link>
                         </li>
 
                         <li className="flex items-center gap-2">
                             <FaLightbulb className="text-yellow-400" />
-                            Insights
+                            <Link href="#">Insights</Link>
                         </li>
 
                         <li className="flex items-center gap-2">
                             <FaPhone className="text-red-500" />
-                            Contact Us
+                            <Link href="/contact">Contact Us</Link>
                         </li>
                     </ul>
-                    {/* ✅ USER ICON WITH DROPDOWN */}
+
+                    {/* USER ICON WITH DROPDOWN */}
                     <div
                         className="relative hidden md:block"
                         onMouseEnter={() => setOpenDropdown("user")}
@@ -138,7 +99,6 @@ export default function Navbar() {
                             <FaChevronDown className="text-xs text-gray-500" />
                         </button>
 
-                        {/* USER DROPDOWN */}
                         <div
                             className={`
                                 absolute right-0 top-full mt-2 w-56 bg-white rounded-md shadow-lg border p-3
@@ -168,6 +128,7 @@ export default function Navbar() {
                             </ul>
                         </div>
                     </div>
+
                     {/* MOBILE TOGGLE */}
                     <button
                         className="md:hidden p-2 border rounded"
@@ -185,38 +146,38 @@ export default function Navbar() {
 
                         <div className="flex justify-between items-center border-b pb-4 mb-4">
                             <img src="/quasent_logo.png" className="h-10" />
-                            <button onClick={() => setMobileMenuOpen(false)}>✕</button>
+                            <button onClick={() => setMobileMenuOpen(false)}>X</button>
                         </div>
 
                         <nav className="space-y-4 text-sm">
 
-                            <div className="flex items-center gap-3">
+                            <Link href="#" className="flex items-center gap-3">
                                 <FaBuilding className="text-blue-500" /> Industries
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center gap-3">
+                            <Link href="#" className="flex items-center gap-3">
                                 <FaBriefcase className="text-purple-500" /> Roles We Staff
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center gap-3">
+                            <Link href="#" className="flex items-center gap-3">
                                 <FaUserShield className="text-green-500" /> How We Vet
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center gap-3">
+                            <Link href="#" className="flex items-center gap-3">
                                 <FaHandshake className="text-orange-500" /> Engagement Models
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center gap-3">
+                            <Link href="/about" className="flex items-center gap-3">
                                 <FaUserTie className="text-sky-500" /> About
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center gap-3">
+                            <Link href="#" className="flex items-center gap-3">
                                 <FaLightbulb className="text-yellow-400" /> Insights
-                            </div>
+                            </Link>
 
-                            <div className="flex items-center gap-3">
+                            <Link href="/contact" className="flex items-center gap-3">
                                 <FaPhone className="text-red-500" /> Contact Us
-                            </div>
+                            </Link>
 
                         </nav>
                     </div>

@@ -10,25 +10,25 @@ import { FaMoneyBillWave, FaRegClock } from "react-icons/fa";
 
 const JOBS = [
     {
-        title: "Sales Director - Fed Civilian",
-        salary: "Up To £160000 Per Annum + $320,000 OTE",
-        location: "Washington, District Of Columbia",
+        title: "Senior Engineer - Substation",
+        // salary: "Up To £160000 Per Annum + $320,000 OTE",
+        location: "Raleigh, North Carolina",
         type: "Permanent",
-        desc: "We are supporting a highly respected cybersecurity software provider...",
+        desc: "As a Senior Substation Engineer. Substation Design Engineers are responsible for designing substations utilizing applicable codes and client standards (if available). Typical design to include general arrangement, equipment and electrical layout, elevation views, cable trench, grounding, conduit drawings, details, bills of material, and AC and DC power systems.",
     },
     {
-        title: "Sales Director - DoD",
-        salary: "Up To US$160000 Per Annum + $320,000 OTE",
-        location: "Washington, District Of Columbia",
+        title: "Lead Engineer - Substation",
+        // salary: "Up To US$160000 Per Annum + $320,000 OTE",
+        location: "Chattanooga, Tennessee",
         type: "Permanent",
-        desc: "We are partnering with an award-winning cybersecurity innovator...",
+        desc: "Engineering department as a Lead Substation Engineer. Substation Design Engineers are responsible for designing substations utilizing applicable codes and client standards. Typical design to include general arrangement, equipment and electrical layout, elevation views, cable trench, grounding, conduit drawings, details, bills of material, and AC and DC power systems.",
     },
     {
-        title: "Production Supervisor - 1st Shift - Food",
-        salary: "Negotiable",
-        location: "Maryland",
+        title: "Construction Manager",
+        salary: "$55.00 - $70.00/ per hour",
+        location: "New York, United States",
         type: "Permanent",
-        desc: "Our Client is a true global leader in the Food Manufacturing sector...",
+        desc: "our Program Management department as a Construction Manager. The Construction Manager is responsible for ensuring that constructability meets Qualus and our clients’ expectations of the quality of each assigned project, to ensure compliance within required construction codes, local jurisdictional requirements. budgetary, scheduling, and safety goals. Employees in this role must have natural gas distribution and transmission pipeline experience, meter/regulator construction experience, and they must have experience coordinating and managing construction work performed by contractors at the project site. ",
     },
 ];
 
@@ -89,9 +89,9 @@ export default function LatestRoles() {
 
                                     {/* Meta */}
                                     <div className="space-y-2 text-gray-600 text-sm mb-6">
-                                        <p className="flex items-center gap-2">
-                                            <FaMoneyBillWave className="text-gray-500" /> {job.salary}
-                                        </p>
+                                        {/*<p className="flex items-center gap-2">*/}
+                                        {/*    <FaMoneyBillWave className="text-gray-500" /> {job.salary}*/}
+                                        {/*</p>*/}
                                         <p className="flex items-center gap-2">
                                             <IoLocationOutline className="text-gray-500" /> {job.location}
                                         </p>

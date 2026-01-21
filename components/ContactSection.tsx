@@ -21,7 +21,7 @@ export default function ContactSection() {
 
                         <div className="mt-4 text-sm text-gray-600 space-y-1">
                             <p>Email: contact@quasent.com</p>
-                            <p>Phone: +1 (800) 123 4567</p>
+                            <p>Phone: +1 508-302-3020</p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ export default function ContactSection() {
                         <button
                             type="submit"
                             className="w-full py-3 rounded-md text-white font-semibold
-              bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 shadow-md"
+                            bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 shadow-md"
                         >
                             Send Message
                         </button>

@@ -51,7 +51,7 @@ const roles = [
 
 export default function RolesWeStaffSection() {
     return (
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-[#eef2ff] to-[#fdf2f8] py-28">
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-[#eef2ff] to-[#fdf2f8] py-18">
 
             {/* Ambient background accents */}
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.15),transparent_45%)]" />

@@ -119,7 +119,7 @@ export default function HowWeVetTalentSection() {
                     className="mt-20 text-center"
                 >
                     <Link
-                        href="/how-we-vet"
+                        href="#"
                         className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500 px-10 py-4 text-sm font-semibold text-white shadow-lg transition hover:opacity-90"
                     >
                         See Our Vetting Process →

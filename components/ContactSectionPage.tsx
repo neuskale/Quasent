@@ -32,7 +32,7 @@ export default function ContactSection() {
                     <div className="space-y-6">
                         <div className="flex items-center gap-4">
                             <FaPhone className="text-2xl text-blue-600" />
-                            <p className="text-gray-700 text-lg">+1 (800) 123 4567</p>
+                            <p className="text-gray-700 text-lg">+1 (508) 302 3020</p>
                         </div>
 
                         <div className="flex items-center gap-4">
@@ -55,16 +55,16 @@ export default function ContactSection() {
                         </div>
 
                         {/* SECOND BRANCH */}
-                        <div className="flex items-start gap-4">
-                            <FaBuilding className="text-2xl text-purple-600 mt-1" />
-                            <div>
-                                <p className="text-xl font-semibold text-gray-900">Middle East Office</p>
-                                <p className="text-gray-700 text-lg leading-relaxed mt-1">
-                                    S2V Plaza, 2-2-104/1, Naim Nagar, Hanumakonda,
-                                    Telangana 506001
-                                </p>
-                            </div>
-                        </div>
+                        {/*<div className="flex items-start gap-4">*/}
+                        {/*    <FaBuilding className="text-2xl text-purple-600 mt-1" />*/}
+                        {/*    <div>*/}
+                        {/*        <p className="text-xl font-semibold text-gray-900">Middle East Office</p>*/}
+                        {/*        <p className="text-gray-700 text-lg leading-relaxed mt-1">*/}
+                        {/*            S2V Plaza, 2-2-104/1, Naim Nagar, Hanumakonda,*/}
+                        {/*            Telangana 506001*/}
+                        {/*        </p>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </div>
                 </motion.div>
 
