@@ -136,7 +136,7 @@ export default function RolesWeStaffSection() {
                     className="mt-24 text-center"
                 >
                     <Link
-                        href="/roles"
+                        href="#"
                         className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-cyan-500 via-indigo-500 to-fuchsia-500 px-12 py-5 text-sm font-semibold text-white shadow-2xl transition hover:scale-105"
                     >
                         View All Roles

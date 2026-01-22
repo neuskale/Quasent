@@ -40,7 +40,7 @@ export default function CareerSection() {
                             title: "Candidate Services",
                             btn: "Explore Services",
                             hoverTxt: "Unlock career growth with guidance tailored to you.",
-                            link: "/candidates",
+                            link: "#",
                         },
                     ].map((card, i) => (
                         <motion.div
