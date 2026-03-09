@@ -21,7 +21,7 @@ export default function ContactSection() {
 
                         <div className="mt-4 text-sm text-gray-600 space-y-1">
                             <p>Email: contact@quasent.com</p>
-                            <p>Phone: +1 508-302-3020</p>
+                            <p>Phone: +1 508-343-0367</p>
                         </div>
                     </div>
                 </div>

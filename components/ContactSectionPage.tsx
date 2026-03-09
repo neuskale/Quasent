@@ -32,7 +32,7 @@ export default function ContactSection() {
                     <div className="space-y-6">
                         <div className="flex items-center gap-4">
                             <FaPhone className="text-2xl text-blue-600" />
-                            <p className="text-gray-700 text-lg">+1 (508) 302 3020</p>
+                            <p className="text-gray-700 text-lg">+1 508-343-0367</p>
                         </div>
 
                         <div className="flex items-center gap-4">
