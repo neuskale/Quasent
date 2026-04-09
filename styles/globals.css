@@ -1,8 +1,34 @@
 @import "tailwindcss";
 
+/* =============================================
+   QUASENT BRAND COLOR SYSTEM
+   Logo gradient: Magenta → Purple → Cyan
+   Light, airy, professional
+   ============================================= */
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e1b3a;
+
+  /* Brand primaries (from logo) */
+  --brand-magenta: #e91e63;
+  --brand-purple: #9c27b0;
+  --brand-cyan: #00bcd4;
+
+  /* Light tints for backgrounds */
+  --brand-magenta-light: #fce4ec;
+  --brand-purple-light: #f3e5f5;
+  --brand-cyan-light: #e0f7fa;
+
+  /* Mid tints for accents */
+  --brand-magenta-mid: #f48fb1;
+  --brand-purple-mid: #ce93d8;
+  --brand-cyan-mid: #80deea;
+
+  /* Surfaces */
+  --surface: #fafbff;
+  --surface-warm: #fdf2f8;
+  --surface-cool: #f0fdfa;
 }
 
 @theme inline {
@@ -12,15 +38,89 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fafafa; }
+::-webkit-scrollbar-thumb { background: #ce93d8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9c27b0; }
+
+/* Brand gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #e91e63, #9c27b0, #00bcd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Brand gradient backgrounds */
+.gradient-brand {
+  background: linear-gradient(135deg, #e91e63, #9c27b0, #00bcd4);
+}
+
+.gradient-brand-light {
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5, #e0f7fa);
+}
+
+.gradient-brand-soft {
+  background: linear-gradient(135deg, rgba(233,30,99,0.08), rgba(156,39,176,0.08), rgba(0,188,212,0.08));
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(156, 39, 176, 0.1), 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* Brand button glow */
+.btn-brand {
+  background: linear-gradient(135deg, #e91e63, #9c27b0, #00bcd4);
+  transition: all 0.3s ease;
+}
+.btn-brand:hover {
+  box-shadow: 0 8px 30px rgba(156, 39, 176, 0.3), 0 4px 15px rgba(233,30,99,0.2);
+  transform: translateY(-1px);
+}
+
+/* Subtle animated gradient for hero backgrounds */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+/* Swiper overrides */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #9c27b0 !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
 }

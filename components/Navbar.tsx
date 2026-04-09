@@ -1,188 +1,128 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
 
-// ICONS
-import {
-    FaBuilding,
-    FaBriefcase,
-    FaUserShield,
-    FaHandshake,
-    FaUserTie,
-    FaLightbulb,
-    FaPhone,
-    FaChevronDown,
-    FaUserCircle,
-} from "react-icons/fa";
+const navLinks = [
+  { label: "About", href: "/about" },
+  { label: "Engineering", href: "/engineering" },
+  { label: "IT", href: "/technology" },
+  { label: "Clients", href: "/clients" },
+  { label: "Candidates", href: "/candidates" },
+  { label: "Insights", href: "#insights" },
+  { label: "Contact Us", href: "/contact" },
+];
 
 export default function Navbar() {
-    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const dropdownRef = useRef<HTMLDivElement>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-        const handler = (event: MouseEvent) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                setOpenDropdown(null);
-            }
-        };
-        document.addEventListener("mousedown", handler);
-        return () => document.removeEventListener("mousedown", handler);
-    }, []);
+  useEffect(() => {
+    const handler = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  }, []);
 
-    return (
-        <header className="w-full bg-white border-b sticky top-0 z-50">
-            <nav className="max-w-7xl mx-auto h-[75px] px-6 md:px-8 flex items-center justify-between">
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileMenuOpen]);
 
-                {/* LOGO */}
-                <Link href="/">
-                    <img src="/quasent_logo.png" alt="Quasent Logo" className="h-12" />
+  return (
+    <header
+      className={`w-full sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 backdrop-blur-xl shadow-[0_2px_20px_rgba(156,39,176,0.06)] border-b border-purple-50"
+          : "bg-white border-b border-gray-100"
+      }`}
+    >
+      <nav className="max-w-7xl mx-auto h-[72px] px-6 lg:px-8 flex items-center justify-between">
+        {/* LOGO */}
+        <Link href="/" className="shrink-0">
+          <img src="/quasent_logo.png" alt="Quasent" className="h-10" />
+        </Link>
+
+        {/* DESKTOP NAV */}
+        <ul className="hidden lg:flex items-center gap-1">
+          {navLinks.map((item) => (
+            <li key={item.label}>
+              <Link
+                href={item.href}
+                className="px-4 py-2 text-[14px] font-medium text-gray-600 hover:text-purple-700 rounded-lg hover:bg-purple-50/50 transition-all duration-200"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* DESKTOP CTA */}
+        <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="/contact"
+            className="px-6 py-2.5 text-sm font-semibold text-white rounded-lg btn-brand shadow-sm"
+          >
+            Get Started
+          </Link>
+        </div>
+
+        {/* MOBILE TOGGLE */}
+        <button
+          className="lg:hidden p-2 text-gray-600 hover:text-purple-700 transition"
+          onClick={() => setMobileMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <FaBars className="text-xl" />
+        </button>
+      </nav>
+
+      {/* MOBILE MENU */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-[9999] lg:hidden">
+          <div
+            className="absolute inset-0 bg-black/20 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+
+          <div className="absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white shadow-2xl">
+            <div className="flex items-center justify-between px-6 h-[72px] border-b border-gray-100">
+              <img src="/quasent_logo.png" alt="Quasent" className="h-9" />
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 text-gray-500 hover:text-purple-700"
+                aria-label="Close menu"
+              >
+                <FaTimes className="text-lg" />
+              </button>
+            </div>
+
+            <nav className="px-6 py-6 space-y-1">
+              {navLinks.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-3 px-4 py-3 text-[15px] font-medium text-gray-700 hover:text-purple-700 hover:bg-purple-50/50 rounded-lg transition-all"
+                >
+                  {item.label}
                 </Link>
+              ))}
 
-                {/* RIGHT */}
-                <div className="flex items-center gap-8">
-
-                    {/* DESKTOP MENU */}
-                    <ul className="hidden md:flex items-center gap-8 text-[15px] font-medium text-gray-800">
-
-                        <li className="flex items-center gap-2">
-                            <FaBuilding className="text-blue-500" />
-                            <Link href="#">Industries</Link>
-                        </li>
-
-                        <li
-                            className="relative"
-                            onMouseEnter={() => setOpenDropdown("roles")}
-                            onMouseLeave={() => setOpenDropdown(null)}
-                        >
-                            <Link href="#" className="flex items-center gap-2">
-                                <FaBriefcase className="text-purple-500" />
-                                Roles We Staff
-                            </Link>
-                        </li>
-
-                        <li className="flex items-center gap-2">
-                            <FaUserShield className="text-emerald-500" />
-                            <Link href="#">How We Vet</Link>
-                        </li>
-
-                        <li className="flex items-center gap-2">
-                            <FaHandshake className="text-orange-500" />
-                            <Link href="#">Engagement Models</Link>
-                        </li>
-
-                        <li className="flex items-center gap-2">
-                            <FaUserTie className="text-sky-500" />
-                            <Link href="/about">About</Link>
-                        </li>
-
-                        <li className="flex items-center gap-2">
-                            <FaLightbulb className="text-yellow-400" />
-                            <Link href="#">Insights</Link>
-                        </li>
-
-                        <li className="flex items-center gap-2">
-                            <FaPhone className="text-red-500" />
-                            <Link href="/contact">Contact Us</Link>
-                        </li>
-                    </ul>
-
-                    {/* USER ICON WITH DROPDOWN */}
-                    <div
-                        className="relative hidden md:block"
-                        onMouseEnter={() => setOpenDropdown("user")}
-                        onMouseLeave={() => setOpenDropdown(null)}
-                    >
-                        <button className="flex items-center gap-2">
-                            <FaUserCircle className="text-[28px] text-indigo-600" />
-                            <FaChevronDown className="text-xs text-gray-500" />
-                        </button>
-
-                        <div
-                            className={`
-                                absolute right-0 top-full mt-2 w-56 bg-white rounded-md shadow-lg border p-3
-                                transition-all
-                                ${openDropdown === "user" ? "opacity-100 visible" : "opacity-0 invisible"}
-                              `}
-                        >
-                            <ul className="space-y-2 text-sm">
-                                <li>
-                                    <Link
-                                        href="#"
-                                        className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100"
-                                    >
-                                        <FaUserTie className="text-blue-500" />
-                                        Request Candidates
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href="#"
-                                        className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-100"
-                                    >
-                                        <FaHandshake className="text-green-500" />
-                                        Talk to Recruiting
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* MOBILE TOGGLE */}
-                    <button
-                        className="md:hidden p-2 border rounded"
-                        onClick={() => setMobileMenuOpen(true)}
-                    >
-                        ☰
-                    </button>
-                </div>
+              <div className="pt-6 border-t border-gray-100 mt-4">
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full px-5 py-3 text-sm font-semibold text-white rounded-lg btn-brand"
+                >
+                  Get Started
+                  <FaArrowRight className="text-xs" />
+                </Link>
+              </div>
             </nav>
-
-            {/* MOBILE MENU */}
-            {mobileMenuOpen && (
-                <div className="fixed inset-0 bg-black/40 z-[9999] md:hidden">
-                    <div className="absolute right-0 top-0 h-full w-[85%] bg-white p-6">
-
-                        <div className="flex justify-between items-center border-b pb-4 mb-4">
-                            <img src="/quasent_logo.png" className="h-10" />
-                            <button onClick={() => setMobileMenuOpen(false)}>X</button>
-                        </div>
-
-                        <nav className="space-y-4 text-sm">
-
-                            <Link href="#" className="flex items-center gap-3">
-                                <FaBuilding className="text-blue-500" /> Industries
-                            </Link>
-
-                            <Link href="#" className="flex items-center gap-3">
-                                <FaBriefcase className="text-purple-500" /> Roles We Staff
-                            </Link>
-
-                            <Link href="#" className="flex items-center gap-3">
-                                <FaUserShield className="text-green-500" /> How We Vet
-                            </Link>
-
-                            <Link href="#" className="flex items-center gap-3">
-                                <FaHandshake className="text-orange-500" /> Engagement Models
-                            </Link>
-
-                            <Link href="/about" className="flex items-center gap-3">
-                                <FaUserTie className="text-sky-500" /> About
-                            </Link>
-
-                            <Link href="#" className="flex items-center gap-3">
-                                <FaLightbulb className="text-yellow-400" /> Insights
-                            </Link>
-
-                            <Link href="/contact" className="flex items-center gap-3">
-                                <FaPhone className="text-red-500" /> Contact Us
-                            </Link>
-
-                        </nav>
-                    </div>
-                </div>
-            )}
-        </header>
-    );
+          </div>
+        </div>
+      )}
+    </header>
+  );
 }
