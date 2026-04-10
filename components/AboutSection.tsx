@@ -39,8 +39,8 @@ export default function AboutSection() {
                         <h2 className="text-4xl font-extrabold text-gray-900">
                             We Are{" "}
                             <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-transparent bg-clip-text">
-        Quasent
-    </span>
+                                Quasent
+                            </span>
                         </h2>
 
                         <p className="text-lg text-gray-600 leading-relaxed text-justify">

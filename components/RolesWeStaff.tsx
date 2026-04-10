@@ -69,7 +69,7 @@ export default function RolesWeStaffSection() {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
                   <FaCog className="text-white text-sm" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Engineering Roles</h3>
+                <h3 className="text-xl font-bold text-gray-900">Engineering Roles We Staff</h3>
               </div>
             </div>
 
@@ -96,7 +96,7 @@ export default function RolesWeStaffSection() {
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
                   <FaLaptopCode className="text-white text-sm" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">IT Roles</h3>
+                <h3 className="text-xl font-bold text-gray-900">IT Roles We Staff</h3>
               </div>
             </div>
 

@@ -76,7 +76,7 @@ export default function Hero() {
                 href="/candidates"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-xl text-purple-700 font-semibold bg-white border border-purple-200 hover:border-purple-300 hover:shadow-md transition-all duration-300"
               >
-                Find Your Next Role
+                Look for Talent
               </Link>
             </motion.div>
 

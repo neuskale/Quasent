@@ -57,23 +57,16 @@ export default function IntroSection() {
             </span>
 
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
-              Staffing with{" "}
+              Quasent is Staffing with{" "}
               <span className="gradient-text">Purpose</span>
             </h2>
 
             <div className="space-y-5 text-gray-600 text-[17px] leading-relaxed">
-              <p>
-                Quasent supports electric, gas, and water utilities, engineering
-                services, field services, construction and engineering firms, and
-                oil and energy service partners with fully vetted engineering,
-                field, and IT professionals.
+              <p className="text-justify">
+                We support electric, gas, and water utilities, engineering services, field services, construction and engineering firms, and oil and energy service partners with fully vetted engineering, field, and IT professionals
               </p>
-              <p>
-                Built for regulated, safety-critical environments, Quasent
-                focuses on delivering the right people, not just resumes. With a
-                solution-driven approach and deep industry understanding, we help
-                clients hire with confidence and help professionals find work
-                that fits their skills and goals.
+              <p className="text-justify">
+                Built for regulated, safety-critical environments, Quasent focuses on delivering the right people, not just resumes. With a solution-driven approach and deep industry understanding, we help clients hire with confidence and help professionals find work that fits their skills and goals.
               </p>
             </div>
 

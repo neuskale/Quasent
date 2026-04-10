@@ -21,12 +21,12 @@ export default function HomePage() {
             <Hero />
             <IntroSection />
             <OurIndustries />
-            <RolesWeStaff />
+            {/*<RolesWeStaff />*/}
             <TalentSection />
-            <About />
-            <LatestJobs />
-            <MarketInsights />
-            <ContactSection />
+            {/*<About />*/}
+            {/*<LatestJobs />*/}
+            {/*<MarketInsights />*/}
+            {/*<ContactSection />*/}
             <Footer />
         </div>
     );
