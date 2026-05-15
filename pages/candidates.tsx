@@ -65,10 +65,10 @@ export default function CandidatesPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[42vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/candidateservices.jpg')" }}
+          style={{ backgroundImage: "url('/candidate-banner.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0520]/97 via-[#1a0a2e]/90 to-[#00bcd4]/15" />
         <div
@@ -102,8 +102,18 @@ export default function CandidatesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Your IT or Engineering Career Deserves{" "}
-            <span className="gradient-text">More Than a Transaction</span>
+            Your IT or Engineering Career Deserves{" "} <br/>
+            <span
+                className="gradient-text"
+                style={{
+                  background:
+                      "linear-gradient(135deg, #a64afe, #ca3dfb, #0a43f6)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+            >
+            More Than a Transaction
+          </span>
           </motion.h1>
 
           <motion.div
@@ -141,12 +151,22 @@ export default function CandidatesPage() {
           >
             <span className="text-sm font-semibold uppercase tracking-widest text-purple-600 mb-4 block">Who We Are For</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
-              Your IT or Engineering Career Deserves{" "}
-              <span className="gradient-text">More Than a Transaction</span>
+              Putting a strategy into{" "} <br/>
+              <span
+                  className="gradient-text"
+                  style={{
+                    background:
+                        "linear-gradient(90deg, #014ef8, #06bcf5, #014ef8)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+              >
+                IT & Engineering Careers
+              </span>
             </h2>
             <div className="space-y-5 text-gray-600 text-[17px] leading-relaxed">
               <p className="text-justify">
-                At Quasent, candidates are not treated like names in a database. We work with professionals whose skills support critical infrastructure, complex engineering programs, and modern technology environments. From engineering and utility systems to IT, software development, data, and cybersecurity, we understand the value of your background, the importance of the right fit, and the need for clear communication at every stage.
+                At Quasent, candidates are not treated like names in a database.We work with professionals whose skills support critical infrastructure, complex engineering programs, and modern technology environments. From engineering and utility systems toIT, software development, data, and cybersecurity, we understand the value of your background, the importance of the right fit, and the need for clear communication at every stage.
               </p>
               <p className="text-justify">
                 Our goal is not just to help you land a job. It is to help you move your career forward with opportunities that align with your experience, your goals, and your long-term growth.
@@ -161,7 +181,7 @@ export default function CandidatesPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl"
           >
-            <Image src="/candidateservices.jpg" alt="Candidates" fill className="object-cover" />
+            <Image src="/candidate-about.webp" alt="Candidates" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             <motion.div
               className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-5 py-4 border border-purple-100"
@@ -239,15 +259,19 @@ export default function CandidatesPage() {
               className="bg-gradient-to-br from-[#1a0a2e] via-[#2d1b4e] to-[#0d2137] rounded-2xl p-8 flex flex-col justify-between"
             >
               <div>
-                <FaCheckCircle className="text-cyan-400 text-2xl mb-4" />
+                {/*<FaCheckCircle className="text-cyan-400 text-2xl mb-4" />*/}
                 <h3 className="text-xl font-bold text-white mb-3">Ready to Take the Next Step?</h3>
                 <p className="text-white/60 text-sm leading-relaxed">
                   Connect with Quasent and explore opportunities that match your skills, experience, and career goals.
                 </p>
               </div>
               <Link
-                href="/contact"
-                className="mt-6 inline-flex items-center gap-2 btn-brand px-6 py-3 rounded-xl text-white font-bold text-sm hover:shadow-lg transition-all"
+                  href="/contact"
+                  className="mt-6 inline-flex items-center gap-1 px-3 py-2 rounded-lg text-white font-medium text-xs hover:shadow-lg transition-all w-fit"
+                  style={{
+                    background:
+                        "linear-gradient(135deg, rgb(243, 11, 140), rgb(129, 96, 249), rgb(19, 171, 224))",
+                  }}
               >
                 Get in Touch <FaArrowRight />
               </Link>
@@ -267,7 +291,7 @@ export default function CandidatesPage() {
             transition={{ duration: 0.6 }}
             className="relative h-[420px] rounded-3xl overflow-hidden shadow-2xl"
           >
-            <Image src="/job_search.png" alt="Who We Work With" fill className="object-cover" />
+            <Image src="/candidates-img.png" alt="Who We Work With" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </motion.div>
 

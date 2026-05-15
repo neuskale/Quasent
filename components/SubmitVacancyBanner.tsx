@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function SubmitVacancyBanner() {
     return (
-        <section className="relative w-full h-[380px] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden">
 
             {/* BACKGROUND IMAGE */}
             <Image

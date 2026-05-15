@@ -28,7 +28,13 @@ export default function TalentSection() {
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
             Future-Proof{" "}
-            <span className="gradient-text">Your Career.</span>
+            <span
+                style={{
+                  background: "linear-gradient(135deg, #fe0d74, #fb693b, #ffb70b)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+            > Your Career.</span>
           </h2>
           <p className="mt-5 text-gray-500 text-lg max-w-xl mx-auto">
             Whether you're hiring or job searching, Quasent connects the right people with the right roles.

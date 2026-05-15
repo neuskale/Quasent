@@ -129,10 +129,10 @@ export default function ContactPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[42vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/contact-us.jpg')" }}
+          style={{ backgroundImage: "url('/contact-banner.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0520]/97 via-[#1a0a2e]/90 to-[#e91e63]/15" />
         <div
@@ -166,7 +166,14 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Let's Build Something <span className="gradient-text">Together</span>
+            Let's Build <br/> Something
+            <span
+              style={{
+                background: "linear-gradient(135deg, #ff9300, #ff7c00, #ff6d00)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            > Together</span>
           </motion.h1>
 
           <motion.p
@@ -195,7 +202,14 @@ export default function ContactPage() {
           >
             <span className="text-sm font-semibold uppercase tracking-widest text-purple-600 mb-4 block">Contact Us</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
-              Get in <span className="gradient-text">Touch</span>
+              Get in
+              <span
+                style={{
+                  background: "linear-gradient(135deg, #2546f8, #7e62f8, #1ba7e1)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              > Touch</span>
             </h2>
             <p className="text-gray-500 text-[17px] leading-relaxed mb-10">
               Our team is here to support your hiring needs, talent strategy, or general inquiries. Reach out to us anytime.

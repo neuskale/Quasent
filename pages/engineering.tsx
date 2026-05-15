@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaCircle, FaBuilding, FaUserTie, FaBolt, FaCog, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowRight, FaCircle, FaBuilding, FaUserTie, FaBolt, FaCog } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
@@ -11,54 +11,69 @@ const roles = [
   {
     title: 'Transmission Line Engineers',
     description: 'Professionals who design, analyze, and maintain systems that carry electrical power over long distances. These roles are essential to system reliability, expansion planning, and high-voltage infrastructure projects.',
-    image: '/images/industries/electricity.webp',
+    image: '/images/industries/transmission.jpg',
+    icon: '/images/Engineering Icons/transmission.png',
+    color: '#ff7200',
   },
   {
     title: 'Relay Settings Engineers',
     description: 'Engineers focused on relay calculations, coordination studies, relay control schemes, and current management. Their work is critical to maintaining system protection and operational accuracy.',
-    image: '/images/industries/engimage.webp',
+    image: '/images/industries/relay-set.jpg',
+    icon: '/images/Engineering Icons/relay-set.png',
+    color: '#ff56a8',
   },
   {
     title: 'Protection & Control (P&C) Engineers',
     description: 'Specialists who work with AC/DC schematics, wiring diagrams, and settings associated with the protection of lines, buses, transformers, breakers, and voltage systems.',
-    image: '/images/industries/engineering-services.webp',
+    image: '/images/industries/protection.jpg',
+    icon: '/images/Engineering Icons/protection.png',
+    color: '#971ae1',
   },
   {
     title: 'Substation Engineers',
     description: 'Engineers responsible for the physical and electrical layout of substations, including bus design, switch arrangements, equipment configuration, and supporting infrastructure.',
-    image: '/images/insights/construction.jpeg',
+    image: '/images/industries/substation.jpg',
+    icon: '/images/Engineering Icons/substation.png',
+    color: '#02bdde',
   },
   {
     title: 'Civil Engineers',
     description: 'Professionals supporting structural design, foundations, permitting, grading, and civil code compliance for utility and infrastructure projects.',
-    image: '/images/industries/highway.webp',
+    image: '/images/industries/civil.jpg',
+    icon: '/images/Engineering Icons/civil.png',
+    color: '#1aacac',
   },
   {
     title: 'Structural Engineers',
     description: 'Experts in structural analysis and design for utility and energy environments, including supports, platforms, foundations, and other critical infrastructure components.',
-    image: '/images/industries/construction-engineering.webp',
+    image: '/images/industries/structural.jpg',
+    icon: '/images/Engineering Icons/structural.png',
+    color: '#ff7200',
   },
   {
     title: 'Distribution Engineers',
     description: 'Engineers focused on electrical distribution systems, feeder design, upgrades, reliability improvements, and service expansion.',
-    image: '/images/industries/field-services.jpeg',
+    image: '/images/industries/distribution.jpg',
+    icon: '/images/Engineering Icons/distribution.png',
+    color: '#ff56a8',
   },
   {
     title: 'Electrical Engineers',
     description: "Technical professionals supporting a broad range of power systems, designs, analysis', and utility-focused electrical engineering initiatives.",
-    image: '/images/industries/naturalresources.webp',
+    image: '/images/industries/electrical.jpg',
+    icon: '/images/Engineering Icons/electrical.png',
+    color: '#971ae1',
   },
 ];
 
 const utilities = [
-  { name: 'ADMS', description: 'Advanced Distribution Management System professionals who support the monitoring, control, optimization, and reliability of electrical distribution networks.' },
-  { name: 'SCADA', description: 'Supervisory Control and Data Acquisition specialists who work on real-time monitoring and control systems used across utility operations.' },
-  { name: 'OMS', description: 'Outage Management Systems talent supporting technologies that improve outage response, coordinate emergency and mutual-aid crews, and help utilities provide accurate restoration information to customers.' },
-  { name: 'Monarch OSI', description: 'Professionals with experience in Monarch OSI, a SCADA platform used for real-time utility monitoring and control.' },
-  { name: 'Oracle NMS', description: 'Talent with expertise in Oracle Network Management System, including environments tied to DERMS, OMS, SCADA integration, ADMS, and grid-edge visibility.' },
-  { name: 'DERMS', description: 'Distributed Energy Resource Management System professionals who help utilities manage distributed generation, storage, and other decentralized energy assets.' },
-  { name: 'GIS', description: 'Geographic Information Systems talent supporting mapping, spatial analysis, network visibility, asset tracking, and utility planning workflows.' },
-
+  { name: 'ADMS', description: 'Advanced Distribution Management System professionals who support the monitoring, control, optimization, and reliability of electrical distribution networks.', color: '#ff7200' },
+  { name: 'SCADA', description: 'Supervisory Control and Data Acquisition specialists who work on real-time monitoring and control systems used across utility operations.', color: '#ff56a8' },
+  { name: 'OMS', description: 'Outage Management Systems talent supporting technologies that improve outage response, coordinate emergency and mutual-aid crews, and help utilities provide accurate restoration information to customers.', color: '#971ae1' },
+  { name: 'Monarch OSI', description: 'Professionals with experience in Monarch OSI, a SCADA platform used for real-time utility monitoring and control.', color: '#02bdde' },
+  { name: 'Oracle NMS', description: 'Talent with expertise in Oracle Network Management System, including environments tied to DERMS, OMS, SCADA integration, ADMS, and grid-edge visibility.', color: '#1aacac' },
+  { name: 'DERMS', description: 'Distributed Energy Resource Management System professionals who help utilities manage distributed generation, storage, and other decentralized energy assets.', color: '#ff7200' },
+  { name: 'GIS', description: 'Geographic Information Systems talent supporting mapping, spatial analysis, network visibility, asset tracking, and utility planning workflows.', color: '#ff56a8' },
 ];
 
 const gridAreas = [
@@ -84,8 +99,8 @@ export default function Engineering() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/images/industries/engimage.webp)' }} />
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url(/engineering-banner.png)' }} />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0520]/97 via-[#1a0a2e]/90 to-[#e91e63]/15" />
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.15) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.15) 1px,transparent 1px)', backgroundSize: '80px 80px' }} />
 
@@ -94,7 +109,7 @@ export default function Engineering() {
         <div className="absolute top-36 right-36 w-56 h-56 rounded-full border border-white/5 hidden lg:block" />
 
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20 w-full"
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16 w-full"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
@@ -115,9 +130,9 @@ export default function Engineering() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Power, Utility &{' '}
-            <span className="gradient-text">Grid Engineering</span>
-            <br />Built for What's Next
+            Connecting Power, Utility<br />& Grid to Tomorrow's{' '}
+            <span style={{ background: 'linear-gradient(90deg, #01bb84, #02b9d9)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Engineering</span>
+            {' '}Talent
           </motion.h1>
 
           <motion.p
@@ -135,7 +150,7 @@ export default function Engineering() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
           >
-            <Link href="/clients" className="btn-brand px-8 py-4 rounded-xl text-white font-bold inline-flex items-center gap-2 hover:shadow-xl transition-all">
+            <Link href="/clients" className="px-8 py-4 rounded-xl text-white font-bold inline-flex items-center gap-2 hover:shadow-xl transition-all" style={{ background: 'linear-gradient(135deg, #ff56a8, #971ae1)' }}>
               Hire Engineers <FaArrowRight />
             </Link>
             <button
@@ -160,15 +175,20 @@ export default function Engineering() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-sm font-semibold uppercase tracking-widest text-purple-600 mb-4 block">Who We Serve</span>
+            <span className="text-sm font-semibold uppercase tracking-widest mb-4 block" style={{ color: '#ff7200' }}>Who We Serve</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-8">
-              Power, Utility, and Grid Engineering{' '}
-              <span className="gradient-text">Built for What's Next</span>
+              Power, Utility, and Grid Engineers{' '}
+              <br/><span style={{ background: 'linear-gradient(90deg, #ff56a8, #971ae1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Built for What's Next</span>
             </h2>
             <div className="space-y-5 text-gray-600 text-[17px] leading-relaxed">
               <p className="text-justify">Quasent connects utilities, engineering firms, and infrastructure organizations with highly specialized engineers across power delivery, substation design, protection and control, civil engineering, and grid modernization technology.</p>
               <p className="text-justify">From transmission and distribution engineering to advanced utility software environments, we help clients secure the people who keep critical systems operating, expanding, and evolving.</p>
               <p className="text-justify">Whether you are building your team or building your career, Quasent brings focused industry knowledge, honest communication, and a deep understanding of the engineering and technology roles shaping the future of energy.</p>
+            </div>
+            <div className="mt-8">
+              <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-bold hover:shadow-xl transition-all" style={{ background: 'linear-gradient(135deg, #ff56a8, #971ae1)' }}>
+                Ask Us? <FaArrowRight />
+              </Link>
             </div>
           </motion.div>
 
@@ -179,7 +199,7 @@ export default function Engineering() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative h-[460px] rounded-3xl overflow-hidden shadow-2xl"
           >
-            <Image src="/images/industries/engineering-services.webp" alt="Engineering" fill className="object-cover" />
+            <Image src="/engineering-about.jpg" alt="Engineering" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </motion.div>
         </div>
@@ -195,10 +215,10 @@ export default function Engineering() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-sm font-semibold uppercase tracking-widest text-purple-600 mb-3 block">Engineering Roles</span>
+            <span className="text-sm font-semibold uppercase tracking-widest mb-3 block" style={{ color: '#ff7200' }}>Engineering Roles</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Engineering and Utility Roles{' '}
-              <span className="gradient-text">We Recruit For</span>
+              <span style={{ background: 'linear-gradient(90deg, #ff56a8, #971ae1)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>We Recruit For</span>
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               Quasent supports hiring across a wide range of technical disciplines in the power, utility, and energy infrastructure space.
@@ -213,21 +233,23 @@ export default function Engineering() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 card-lift flex gap-0"
+                className="group bg-white rounded-2xl shadow-sm border border-gray-100 card-lift flex gap-0 relative"
               >
-                {/* Image strip */}
-                <div className="relative w-32 shrink-0 overflow-hidden">
-                  <Image src={role.image} alt={role.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10" />
+                {/* Photo strip — image clipped inside, icon allowed to overflow */}
+                <div className="relative w-32 shrink-0">
+                  <div className="absolute inset-0 overflow-hidden rounded-l-2xl">
+                    <Image src={role.image} alt={role.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10" />
+                  </div>
+                  <div className="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 z-10 drop-shadow-lg">
+                    <Image src={role.icon} alt="" width={40} height={40} className="object-contain" unoptimized />
+                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 flex flex-col justify-center">
-                  <div className="flex items-start gap-3 mb-2">
-                    <FaCheckCircle className="text-pink-500 shrink-0 mt-1 text-sm" />
-                    <h3 className="font-bold text-gray-900 text-[15px] leading-snug">{role.title}</h3>
-                  </div>
-                  <p className="text-gray-500 text-sm leading-relaxed pl-6">{role.description}</p>
+                {/* Content — left padding accounts for the half-icon */}
+                <div className="py-5 pr-5 pl-8 flex flex-col justify-center">
+                  <h3 className="font-bold text-gray-900 text-[15px] leading-snug mb-2">{role.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{role.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -251,7 +273,7 @@ export default function Engineering() {
             <span className="text-sm font-semibold uppercase tracking-widest text-white/50 mb-3 block">Utility Platforms</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-white">
               Utility Technology &{' '}
-              <span className="gradient-text">Software Expertise</span>
+              <span style={{ color: '#ff56a8' }}>Software Expertise</span>
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mt-4 text-lg">
               As the utility sector evolves, hiring demands increasingly extend beyond traditional engineering roles. Quasent also supports technology and software professionals working on implementation, integration, upgrade, and modernization projects across utility environments.
@@ -271,8 +293,8 @@ export default function Engineering() {
                 <div className="absolute top-4 right-4 text-5xl font-black text-white/4 pointer-events-none select-none">
                   {platform.name.substring(0, 3)}
                 </div>
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500/30 to-purple-500/30 border border-white/10 flex items-center justify-center mb-4">
-                  <FaBolt className="text-pink-400 text-sm" />
+                <div className="w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center mb-4" style={{ backgroundColor: `${platform.color}30` }}>
+                  <FaBolt className="text-sm" style={{ color: platform.color }} />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{platform.name}</h3>
                 <p className="text-sm text-white/50 leading-relaxed">{platform.description}</p>
@@ -292,8 +314,8 @@ export default function Engineering() {
             <div className="grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
               {/* Left: heading + intro */}
               <div className="px-10 py-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-white/10 mb-5">
-                  <FaCog className="text-pink-400 text-xs" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 mb-5" style={{ backgroundColor: '#ff720020' }}>
+                  <FaCog className="text-xs" style={{ color: '#ff7200' }} />
                   <span className="text-xs font-semibold text-white/70 uppercase tracking-widest">Software Roles</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -323,7 +345,7 @@ export default function Engineering() {
                       transition={{ duration: 0.35, delay: i * 0.06 }}
                       className="flex items-start gap-3"
                     >
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 shrink-0" />
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: '#ff7200' }} />
                       <span className="text-white/65 text-[15px] leading-relaxed">{item}</span>
                     </motion.li>
                   ))}
@@ -343,10 +365,10 @@ export default function Engineering() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-sm font-semibold uppercase tracking-widest text-purple-600 mb-3 block">Future Ready</span>
+            <span className="text-sm font-semibold uppercase tracking-widest mb-3 block" style={{ color: '#ff7200' }}>Future Ready</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Hiring for the Future of the{' '}
-              <span className="gradient-text">Grid</span>
+              <span style={{ background: 'linear-gradient(90deg, #02bdde, #1aacac)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Grid</span>
             </h2>
             <p className="text-gray-600 mb-10 leading-relaxed text-[17px] text-justify">
               Utilities are under growing pressure to modernize aging infrastructure, improve reliability, integrate distributed energy resources, and adopt smarter digital systems. Quasent helps clients hire the engineering and technology talent required to move those initiatives forward.
@@ -363,10 +385,10 @@ export default function Engineering() {
                   className="flex items-center justify-between py-3.5 border-b border-gray-100 group cursor-default"
                 >
                   <div className="flex items-center gap-3">
-                    <FaCircle className="text-pink-500 text-[8px]" />
+                    <FaCircle className="text-[8px]" style={{ color: '#ff7200' }} />
                     <span className="text-gray-700 font-medium">{area}</span>
                   </div>
-                  <FaArrowRight className="text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all text-sm" />
+                  <FaArrowRight className="text-gray-300 group-hover:text-orange-500 group-hover:translate-x-1 transition-all text-sm" />
                 </motion.div>
               ))}
             </div>
@@ -381,7 +403,7 @@ export default function Engineering() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <Image src="/images/industries/electricity.webp" alt="Grid Modernization" fill className="object-cover rounded-3xl shadow-2xl" />
+            <Image src="/transmission-line.jpg" alt="Grid Modernization" fill className="object-cover rounded-3xl shadow-2xl" />
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </motion.div>
         </div>
@@ -400,7 +422,7 @@ export default function Engineering() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Build Your Engineering Team. Advance Your Engineering Career. </h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Build Your Engineering Team. <br/>Advance Your Engineering Career. </h2>
             <p className="text-xl text-white/75 max-w-2xl mx-auto">
               From initial screening to final placement, we manage the entire recruitment process so you can focus on building great infrastructure.
             </p>
@@ -415,7 +437,7 @@ export default function Engineering() {
               transition={{ duration: 0.6, delay: 0.1 }}
               whileHover={{ y: -6 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-white/20 text-white text-xl flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl text-white text-xl flex items-center justify-center mb-5" style={{ background: 'linear-gradient(135deg, #ff7200, #ff56a8)' }}>
                 <FaBuilding />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Looking for Engineering Talent? </h3>
@@ -435,7 +457,7 @@ export default function Engineering() {
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ y: -6 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-white/20 text-white text-xl flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl text-white text-xl flex items-center justify-center mb-5" style={{ background: 'linear-gradient(135deg, #02bdde, #1aacac)' }}>
                 <FaUserTie />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Looking for Engineers? </h3>

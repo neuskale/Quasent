@@ -3,21 +3,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import {
-  FaBolt,
-  FaTint,
-  FaCogs,
-  FaTools,
-  FaHardHat,
-  FaOilCan,
-  FaLaptopCode,
-  FaCloud,
-  FaShieldAlt,
-  FaDatabase,
-  FaProjectDiagram,
-  FaServer,
-  FaRobot,
-} from "react-icons/fa";
 
 type Role = {
   name: string;
@@ -29,102 +14,102 @@ type Role = {
 const engineeringRoles: Role[] = [
   {
     name: "Transmission Line Engineers",
-    imageUrl: "/images/industries/electricity.webp",
-    icon: <FaBolt />,
-    accent: "from-pink-500 to-rose-600",
+    imageUrl: "/images/industries/transmission.jpg",
+    icon: <img src="/images/Engineering%20Icons/transmission.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-purple-600 to-purple-800",
   },
   {
     name: "Relay Settings Engineers",
-    imageUrl: "/images/industries/engimage.webp",
-    icon: <FaTint />,
-    accent: "from-blue-500 to-cyan-600",
+    imageUrl: "/images/industries/relay-set.jpg",
+    icon: <img src="/images/Engineering%20Icons/relay-set.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-green-400 to-green-600",
   },
   {
     name: "Protection & Control (P&C) Engineers",
-    imageUrl: "/images/industries/engineering-services.webp",
-    icon: <FaCogs />,
-    accent: "from-purple-500 to-violet-600",
+    imageUrl: "/images/industries/protection.jpg",
+    icon: <img src="/images/Engineering%20Icons/protection.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-pink-500 to-pink-700",
   },
   {
     name: "Substation Engineers",
-    imageUrl: "/images/insights/construction.jpeg",
-    icon: <FaTools />,
-    accent: "from-amber-500 to-orange-600",
+    imageUrl: "/images/industries/substation.jpg",
+    icon: <img src="/images/Engineering%20Icons/substation.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-cyan-400 to-cyan-600",
   },
   {
     name: "Civil Engineers",
-    imageUrl: "/images/industries/highway.webp",
-    icon: <FaHardHat />,
-    accent: "from-orange-500 to-red-500",
+    imageUrl: "/images/industries/civil.jpg",
+    icon: <img src="/images/Engineering%20Icons/civil.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-orange-400 to-orange-600",
   },
   {
     name: "Structural Engineers",
-    imageUrl: "/images/industries/construction-engineering.webp",
-    icon: <FaOilCan />,
-    accent: "from-red-500 to-rose-600",
+    imageUrl: "/images/industries/structural.jpg",
+    icon: <img src="/images/Engineering%20Icons/structural.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-violet-400 to-violet-600",
   },
   {
     name: "Distribution Engineers",
-    imageUrl: "/images/industries/field-services.jpeg",
-    icon: <FaBolt />,
-    accent: "from-pink-500 to-purple-600",
+    imageUrl: "/images/industries/distribution.jpg",
+    icon: <img src="/images/Engineering%20Icons/distribution.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-blue-500 to-blue-700",
   },
   {
     name: "Electrical Engineers",
-    imageUrl: "/images/industries/naturalresources.webp",
-    icon: <FaCogs />,
-    accent: "from-violet-500 to-purple-600",
+    imageUrl: "/images/industries/electrical.jpg",
+    icon: <img src="/images/Engineering%20Icons/electrical.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-teal-400 to-teal-600",
   },
 ];
 
 const itRoles: Role[] = [
   {
     name: "Software & Application Developers",
-    imageUrl: "/images/industries/technology.webp",
-    icon: <FaLaptopCode />,
-    accent: "from-cyan-500 to-teal-600",
+    imageUrl: "/images/industries/software-application.jpg",
+    icon: <img src="/images/IT%20Icons/software.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-cyan-400 to-sky-500",
   },
   {
     name: "Project Management & Business Analysis",
-    imageUrl: "/images/industries/consumer.webp",
-    icon: <FaProjectDiagram />,
-    accent: "from-sky-500 to-blue-600",
+    imageUrl: "/images/industries/project-management.jpg",
+    icon: <img src="/images/IT%20Icons/project.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-pink-500 to-pink-700",
   },
   {
     name: "Cybersecurity & Information Security",
-    imageUrl: "/images/insights/Technology-SaaS.jpeg",
-    icon: <FaShieldAlt />,
-    accent: "from-purple-500 to-violet-600",
+    imageUrl: "/images/industries/cyber-security.jpg",
+    icon: <img src="/images/IT%20Icons/cyber.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-purple-600 to-purple-800",
   },
   {
     name: "Data & Analytics Professionals",
-    imageUrl: "/images/insights/market-bg.jpeg",
-    icon: <FaDatabase />,
-    accent: "from-emerald-500 to-teal-600",
+    imageUrl: "/images/industries/data-analytics.png",
+    icon: <img src="/images/IT%20Icons/data.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-teal-400 to-teal-600",
   },
   {
     name: "ERP & Enterprise Systems Experts",
-    imageUrl: "/images/industries/healthscience.webp",
-    icon: <FaCogs />,
-    accent: "from-amber-500 to-orange-600",
+    imageUrl: "/images/industries/erp.jpg",
+    icon: <img src="/images/IT%20Icons/erp.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-green-400 to-green-600",
   },
   {
     name: "Cloud & DevOps Professionals",
-    imageUrl: "/images/insights/natural.jpeg",
-    icon: <FaCloud />,
-    accent: "from-blue-500 to-cyan-600",
+    imageUrl: "/images/industries/cloud.jpg",
+    icon: <img src="/images/IT%20Icons/cloud.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-orange-400 to-orange-600",
   },
   {
     name: "Network, Infrastructure & Database",
-    imageUrl: "/images/industries/gas-water.jpg",
-    icon: <FaServer />,
-    accent: "from-slate-500 to-gray-600",
+    imageUrl: "/images/industries/network.jpg",
+    icon: <img src="/images/IT%20Icons/network.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-fuchsia-400 to-pink-500",
   },
   {
     name: "AI, Automation & Emerging Technology",
-    imageUrl: "/images/insights/robotic-industry.jpeg",
-    icon: <FaRobot />,
-    accent: "from-violet-500 to-purple-600",
+    imageUrl: "/images/industries/ai.jpg",
+    icon: <img src="/images/IT%20Icons/AI.png" alt="" className="w-full h-full object-cover rounded-xl" />,
+    accent: "from-blue-500 to-blue-700",
   },
 ];
 
@@ -257,25 +242,53 @@ export default function OurIndustriesSection() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 rounded-2xl gradient-brand px-10 py-14 text-center text-white"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 overflow-hidden rounded-[24px]"
         >
-          <h3 className="text-2xl sm:text-3xl font-bold mb-3">
-            Ready to Build Your Team?
-          </h3>
-          <p className="text-white/75 text-lg max-w-xl mx-auto mb-8">
-            Connect with Quasent to source top-tier engineering and IT professionals for your next project.
-          </p>
-          <Link
-            href="/clients"
-            className="inline-flex items-center gap-2 bg-white text-purple-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-purple-50 transition shadow-md"
-          >
-            Find Engineering and IT Talent
-            <span className="text-lg">&rarr;</span>
-          </Link>
+          <div className="relative flex min-h-[320px] overflow-hidden bg-white">
+
+            {/* RIGHT IMAGE — rendered first so it sits behind the gradient */}
+            <div className="absolute right-0 top-0 bottom-0 hidden w-[40%] lg:block">
+              <img
+                  src="/images/industries/team.png"
+                  alt="Team professionals"
+                  className="h-full w-full object-cover"
+              />
+            </div>
+
+            {/* LEFT GRADIENT SECTION */}
+            <div
+                className="relative z-10 flex w-full items-center overflow-hidden lg:w-[78%]"
+                style={{
+                  background:
+                      "linear-gradient(90deg, #C400D9 0%, #7C3AED 35%, #0EA5E9 100%)",
+                  // borderTopRightRadius: "220px",
+                  borderBottomRightRadius: "220px",
+                }}
+            >
+              {/* CONTENT */}
+              <div className="relative z-10 px-10 py-14 lg:px-14">
+                <h2 className="mb-5 max-w-[760px] text-5xl font-extrabold leading-[1.05] tracking-[-2px] text-white">
+                  Ready to Build Your Team?
+                </h2>
+
+                <p className="mb-8 max-w-[620px] text-xl leading-relaxed text-white/90">
+                  Connect with Quasent to source top-tier engineering and IT
+                  professionals for your next project.
+                </p>
+
+                <Link
+                    href="/clients"
+                    className="inline-flex items-center justify-center rounded-[16px] bg-white px-8 py-5 text-xl font-semibold text-purple-700 shadow-lg transition-all duration-300 hover:bg-white/95"
+                >
+                  Find Engineering and IT Talent →
+                </Link>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

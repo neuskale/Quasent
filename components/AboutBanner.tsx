@@ -6,11 +6,11 @@ import Image from "next/image";
 
 export default function AboutBanner() {
     return (
-        <section className="relative w-full h-[360px] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden">
 
             {/* BACKGROUND IMAGE */}
             <Image
-                src="/about-us.jpg"  // <- replace with your image
+                src="/about-banner.png"  // <- replace with your image
                 alt="About Quasent Banner"
                 fill
                 priority

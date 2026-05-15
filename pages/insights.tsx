@@ -90,8 +90,8 @@ export default function InsightsPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[42vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/insights/market-bg.jpeg')" }} />
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/insights-banner.png')" }} />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0520]/97 via-[#1a0a2e]/90 to-[#9c27b0]/20" />
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -123,7 +123,13 @@ export default function InsightsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Insights from <span className="gradient-text">Quasent</span>
+            Insights from <span
+              style={{
+                background: "linear-gradient(135deg, #9554ff, #5987f9, #10c8f3)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+          > Quasent</span>
           </motion.h1>
 
           <motion.p

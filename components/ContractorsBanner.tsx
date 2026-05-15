@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function ContractorsBanner() {
     return (
-        <section className="relative w-full h-[360px] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-[420px] flex items-center justify-center overflow-hidden">
 
             <Image
                 src="/job-contractors.jpg"

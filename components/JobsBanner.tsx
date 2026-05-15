@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function JobsBanner() {
     return (
-        <section className="relative bg-gray-900 py-20">
+        <section className="relative bg-gray-900 min-h-[420px] flex items-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-pink-500/30 via-purple-500/25 to-cyan-500/25" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">

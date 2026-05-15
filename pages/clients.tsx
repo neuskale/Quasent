@@ -69,10 +69,10 @@ export default function ClientsPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[42vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/contract.jpg')" }}
+          style={{ backgroundImage: "url('/clients-banner.png')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0520]/97 via-[#1a0a2e]/90 to-[#e91e63]/15" />
         <div
@@ -90,14 +90,26 @@ export default function ClientsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
+          <motion.div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-sm text-white/90 mb-7"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <FaCircle className="text-purple-400 text-xs animate-pulse" />
+            For Clients
+          </motion.div>
+
           <motion.h1
             className="text-4xl lg:text-6xl font-black text-white leading-[1.08] max-w-4xl mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
           >
-            Specialized IT & Engineering Talent for{" "}
-            <span className="gradient-text">Power, Utility, and Critical Infrastructure</span>
+            Specialized IT & Engineering Talent for{" "} <br/>
+            <span style={{ background: "linear-gradient(90deg, #1945f7, #704cfd, #984fff, #4a86ec)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              Power, Utility, and Critical Infrastructure
+            </span>
           </motion.h1>
 
           <motion.div
@@ -134,9 +146,11 @@ export default function ClientsPage() {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-              Specialized IT & Engineering Talent for{" "}
-              <span className="gradient-text">Power, Utility, and Critical Infrastructure</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight text-center">
+              Solving Your Hiring Challenges for{" "} <br/>
+              <span style={{ background: "linear-gradient(90deg, #ff9800, #ff8e00, #ff8001, #ff6900)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                Power, Utility, and Critical Infrastructure
+              </span>
             </h2>
           </motion.div>
 
@@ -229,7 +243,7 @@ export default function ClientsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Image src="/contract.jpg" alt="Organizations We Partner With" fill className="object-cover" />
+            <Image src="/clients.jpg" alt="Organizations We Partner With" fill className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
           </motion.div>
 
@@ -284,7 +298,7 @@ export default function ClientsPage() {
             <span className="text-sm font-semibold uppercase tracking-widest text-white/50 mb-3 block">How We Work</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-white">
               Flexible{" "}
-              <span className="gradient-text">Engagement Models</span>
+              <span style={{ color: "#00caea" }}>Engagement Models</span>
             </h2>
             <p className="text-white/50 max-w-xl mx-auto mt-4 text-lg">
               We adapt to your hiring needs — whether you need short-term support or permanent talent.

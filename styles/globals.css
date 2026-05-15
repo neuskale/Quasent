@@ -11,19 +11,19 @@
   --foreground: #1e1b3a;
 
   /* Brand primaries (from logo) */
-  --brand-magenta: #e91e63;
-  --brand-purple: #9c27b0;
-  --brand-cyan: #00bcd4;
+  --brand-magenta: #ec4899;
+  --brand-purple: #a855f7;
+  --brand-cyan: #22d3ee;
 
   /* Light tints for backgrounds */
-  --brand-magenta-light: #fce4ec;
-  --brand-purple-light: #f3e5f5;
-  --brand-cyan-light: #e0f7fa;
+  --brand-magenta-light: #fdf2f8;
+  --brand-purple-light: #faf5ff;
+  --brand-cyan-light: #ecfeff;
 
   /* Mid tints for accents */
-  --brand-magenta-mid: #f48fb1;
-  --brand-purple-mid: #ce93d8;
-  --brand-cyan-mid: #80deea;
+  --brand-magenta-mid: #f9a8d4;
+  --brand-purple-mid: #d8b4fe;
+  --brand-cyan-mid: #67e8f9;
 
   /* Surfaces */
   --surface: #fafbff;
@@ -53,12 +53,12 @@ html {
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #fafafa; }
-::-webkit-scrollbar-thumb { background: #ce93d8; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #9c27b0; }
+::-webkit-scrollbar-thumb { background: #d8b4fe; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a855f7; }
 
 /* Brand gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #e91e63, #9c27b0, #00bcd4);
+  background: linear-gradient(90deg, #ec4899, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,15 +66,15 @@ html {
 
 /* Brand gradient backgrounds */
 .gradient-brand {
-  background: linear-gradient(135deg, #e91e63, #9c27b0, #00bcd4);
+  background: linear-gradient(135deg, #ec4899 0%, #a855f7 55%, #22d3ee 100%);
 }
 
 .gradient-brand-light {
-  background: linear-gradient(135deg, #fce4ec, #f3e5f5, #e0f7fa);
+  background: linear-gradient(135deg, #fdf2f8, #faf5ff, #ecfeff);
 }
 
 .gradient-brand-soft {
-  background: linear-gradient(135deg, rgba(233,30,99,0.08), rgba(156,39,176,0.08), rgba(0,188,212,0.08));
+  background: linear-gradient(135deg, rgba(236,72,153,0.08), rgba(168,85,247,0.08), rgba(34,211,238,0.08));
 }
 
 /* Glass effect */
@@ -95,11 +95,11 @@ html {
 
 /* Brand button glow */
 .btn-brand {
-  background: linear-gradient(135deg, #e91e63, #9c27b0, #00bcd4);
+  background: linear-gradient(135deg, #ec4899, #a855f7);
   transition: all 0.3s ease;
 }
 .btn-brand:hover {
-  box-shadow: 0 8px 30px rgba(156, 39, 176, 0.3), 0 4px 15px rgba(233,30,99,0.2);
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.4), 0 4px 15px rgba(236, 72, 153, 0.3);
   transform: translateY(-1px);
 }
 

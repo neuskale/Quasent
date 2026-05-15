@@ -42,11 +42,11 @@ const stats = [
 ];
 
 const story = [
-  { step: "01", heading: "It Started with People", body: "Quasent started with a simple realization: the best part of any business is people." },
-  { step: "02", heading: "A Different Path", body: "After beginning a career in banking, it became clear that building relationships, not paperwork, was what truly mattered. That led to staffing, where success came quickly, but something was missing." },
-  { step: "03", heading: "A New Approach", body: "The industry felt rigid, transactional, and too often treated people like numbers instead of individuals. Quasent was created to change that." },
-  { step: "04", heading: "Built Differently", body: "Built from small beginnings, the goal was to step outside the traditional staffing model and do it better, more thoughtfully, more intentionally, and with real ownership. By combining a people-first mindset with deep knowledge of engineering and IT, Quasent delivers a more informed, precise, and solutions-driven approach to hiring." },
-  { step: "05", heading: "Core Value", body: "At its core, Quasent is about helping people find their niche, and helping businesses in the power and utilities industry find the right people to move forward." },
+  { step: "01", heading: "It Started with People", body: "Quasent started with a simple realization: the best part of any business is people.", color: "#ff7200" },
+  { step: "02", heading: "A Different Path", body: "After beginning a career in banking, it became clear that building relationships, not paperwork, was what truly mattered. That led to staffing, where success came quickly, but something was missing.", color: "#ff56a8" },
+  { step: "03", heading: "A New Approach", body: "The industry felt rigid, transactional, and too often treated people like numbers instead of individuals. Quasent was created to change that.", color: "#971ae1" },
+  { step: "04", heading: "Built Differently", body: "Built from small beginnings, the goal was to step outside the traditional staffing model and do it better, more thoughtfully, more intentionally, and with real ownership. By combining a people-first mindset with deep knowledge of engineering and IT, Quasent delivers a more informed, precise, and solutions-driven approach to hiring.", color: "#02bdde" },
+  { step: "05", heading: "Core Value", body: "At its core, Quasent is about helping people find their niche, and helping businesses in the power and utilities industry find the right people to move forward.", color: "#1aacac" },
 ];
 
 export default function AboutPage() {
@@ -55,8 +55,8 @@ export default function AboutPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/about-us.jpg')" }} />
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/about-banner.png')" }} />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0520]/95 via-[#1a0a2e]/85 to-[#e91e63]/20" />
 
         {/* Decorative circles */}
@@ -64,7 +64,7 @@ export default function AboutPage() {
         <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-white/5 hidden lg:block" />
 
         <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-20 w-full"
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-16 w-full"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => document.getElementById("our-story")?.scrollIntoView({ behavior: "smooth" })}
-              className="btn-brand px-7 py-3 text-white font-semibold rounded-xl hover:shadow-xl transition-all"
+              className="px-7 py-3 text-white font-semibold rounded-xl bg-gradient-to-r from-orange-400 to-pink-500 hover:shadow-xl hover:from-orange-500 hover:to-pink-600 transition-all"
             >
               Our Story
             </button>
@@ -160,7 +160,7 @@ export default function AboutPage() {
                   className="flex gap-5"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-md">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-white text-xs font-bold shadow-md" style={{ backgroundColor: item.color }}>
                       {item.step}
                     </div>
                     {i < story.length - 1 && <div className="w-px flex-1 bg-gradient-to-b from-purple-200 to-transparent mt-2" />}
@@ -221,7 +221,7 @@ export default function AboutPage() {
               className="relative"
           >
             <div className="relative h-[540px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="/about-img.png" alt="About Quasent" fill className="object-cover" />
+              <Image src="/about-img.png" alt="About Quasent" fill unoptimized className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
 
@@ -256,7 +256,7 @@ export default function AboutPage() {
           >
             <span className="text-sm font-semibold uppercase tracking-widest text-purple-600 mb-3 block">The Team</span>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
-              Meet Our <span className="gradient-text">Founders</span>
+              Meet Our <span style={{ background: "linear-gradient(90deg, #ff7200, #ff56a8)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Founders</span>
             </h2>
           </motion.div>
 
@@ -267,7 +267,8 @@ export default function AboutPage() {
                 role: "Co-Founder & CEO",
                 photo: null,
                 initials: "JO",
-                gradient: "from-pink-500 to-purple-600",
+                fromColor: "#ff7200",
+                toColor: "#ff56a8",
                 tag: "Relationship Builder",
                 bio: "Joe's journey from banking to staffing shaped the vision for Quasent. His passion for building meaningful relationships and doing business the right way drives the company's mission to transform how staffing works in the engineering and utilities space.",
                 social: { linkedin: "#", twitter: "#", email: "joe@quasent.com" },
@@ -277,7 +278,8 @@ export default function AboutPage() {
                 role: "Co-Founder & CTO",
                 photo: null,
                 initials: "KA",
-                gradient: "from-cyan-500 to-purple-600",
+                fromColor: "#971ae1",
+                toColor: "#02bdde",
                 tag: "Technical Expert",
                 bio: "Karthik brings deep technical expertise and operational excellence. His understanding of engineering and IT markets ensures Quasent delivers precision in every placement and truly solves client needs at scale.",
                 social: { linkedin: "#", twitter: "#", email: "karthik@quasent.com" },
@@ -294,7 +296,7 @@ export default function AboutPage() {
                 {/* Top: photo + name + role */}
                 <div className="flex items-center gap-5 mb-6">
                   {/* Portrait photo / avatar */}
-                  <div className={`relative w-20 h-20 rounded-2xl shrink-0 overflow-hidden bg-gradient-to-br ${founder.gradient} shadow-md flex items-center justify-center`}>
+                  <div className="relative w-20 h-20 rounded-2xl shrink-0 overflow-hidden shadow-md flex items-center justify-center" style={{ background: `linear-gradient(135deg, ${founder.fromColor}, ${founder.toColor})` }}>
                     {founder.photo ? (
                       <Image src={founder.photo} alt={founder.name} fill className="object-cover object-top" />
                     ) : (
@@ -303,7 +305,7 @@ export default function AboutPage() {
                   </div>
 
                   <div>
-                    <span className={`inline-block px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-gradient-to-r ${founder.gradient} text-white mb-1.5`}>
+                    <span className="inline-block px-2.5 py-0.5 text-[11px] font-semibold rounded-full text-white mb-1.5" style={{ background: `linear-gradient(135deg, ${founder.fromColor}, ${founder.toColor})` }}>
                       {founder.tag}
                     </span>
                     <h3 className="text-xl font-bold text-gray-900 leading-tight">{founder.name}</h3>
@@ -312,7 +314,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Divider */}
-                <div className={`h-px w-full bg-gradient-to-r ${founder.gradient} opacity-20 mb-6`} />
+                <div className="h-px w-full opacity-20 mb-6" style={{ background: `linear-gradient(to right, ${founder.fromColor}, ${founder.toColor})` }} />
 
                 {/* Bio */}
                 <p className="text-gray-600 text-[15px] leading-relaxed flex-1">{founder.bio}</p>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBolt, FaLaptopCode, FaTools, FaSolarPanel } from "react-icons/fa";
+import { FaBolt, FaLaptopCode, FaTools, FaNetworkWired } from "react-icons/fa";
 
 const capabilities = [
   {
@@ -12,7 +12,7 @@ const capabilities = [
     desc: "Power delivery, substations, T&D, protection & control",
     gradient: "from-pink-500 to-rose-600",
     bg: "bg-pink-50",
-    border: "border-pink-100",
+    border: "border-pink-200",
   },
   {
     icon: FaLaptopCode,
@@ -20,7 +20,7 @@ const capabilities = [
     desc: "Software, cloud, data, cybersecurity, AI & automation",
     gradient: "from-purple-500 to-violet-600",
     bg: "bg-purple-50",
-    border: "border-purple-100",
+    border: "border-purple-200",
   },
   {
     icon: FaTools,
@@ -28,15 +28,15 @@ const capabilities = [
     desc: "Installation, commissioning, maintenance & inspection",
     gradient: "from-cyan-500 to-teal-600",
     bg: "bg-cyan-50",
-    border: "border-cyan-100",
+    border: "border-cyan-200",
   },
   {
-    icon: FaSolarPanel,
+    icon: FaNetworkWired,
     title: "Grid Modernization",
     desc: "Smart infrastructure, DER, SCADA, ADMS & digital ops",
     gradient: "from-amber-500 to-orange-600",
     bg: "bg-amber-50",
-    border: "border-amber-100",
+    border: "border-amber-200",
   },
 ];
 
